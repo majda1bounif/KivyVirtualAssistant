@@ -1,0 +1,22 @@
+Main:
+    MDScreen:
+        radius: [25, 0, 0, 0]
+        md_bg_color:56/255,40/255,81/255,1
+    MDBoxLayout:
+        size_hint_y:.25
+        padding:dp(25)
+        MDBoxLayout:
+            spacing:dp(15)
+            padding:dp(25)
+            orientation:"horizontal"
+            MDFloatingActionButton:
+                id:'mic'
+                icon: "microphone"
+                md_bg_color: app.theme_cls.primary_color
+                hint_animation: True
+                on_release: root.commands()
+            MDTextField:
+                id:'txt'
+                hint_text: "I'm Listening ..."
+                mode: "fill"
+                fill_color: 0, 0, 0, .4
